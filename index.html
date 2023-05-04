@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>TradeSoft App 2.0 - trade daily Crypto like a pro, official website of the V 2.0 winner trading app</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+    <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+<link href="/assets/css/bundle.aace091d82d5c0e9a4b4.css" rel="stylesheet"></head>
+
+<body class="body" id="body">
+    <header class="header">
+        <div class='container'>
+            <div class="header__body">
+                <a href="#" class="header__logo">
+                    <img src="/assets/img/logo.png" alt="Logo">
+                </a>
+                <div class="header__burger">
+                    <span></span>
+                </div>
+                <nav class="header__menu">
+                    <ul class="header__list">
+                        <li>
+                            <a href="#about" class="header__link">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#faq" class="header__link">FAQ Page</a>
+                        </li>
+                        <li>
+                            <a href="#form" class="header__link">Contact Us</a>
+                        </li>
+                        <li>
+                            <a href="#form" class="header__link">Login</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="col-lg-9 mx-auto">
+            <h1>
+                TradeSoft - invest in crypto like a pro, automated trading app made easy
+            </h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row main-row">
+            <div class="col-lg-9">
+                <img class="main-img" src="/assets/img/shutterstock_1433615831-Converted-1024x575.png" alt="">
+            </div>
+            <div class="col-lg-3 my-auto">
+                <form id="form" class="form signup_form" action="/registration" method="POST" novalidate="novalidate">
+                    <div class="form-group col-xs-6">
+                        <input type="text" name="first_name" class="form-control" placeholder="First name"
+                            title="First Name">
+                    </div>
+                    <div class="form-group col-xs-6">
+                        <input type="text" name="last_name" class="form-control" placeholder="Surname"
+                            title="Last Name">
+                    </div>
+                    <div class="form-group col-xs-12">
+                        <input type="email" name="email" class="form-control" placeholder="Email" title="Email Address">
+                    </div>
+                    <div class="form-group col-xs-12 phone-group">
+                        <input type="tel" name="phone_raw" class="form-control" placeholder="Phone Number"
+                            title="Phone Number" data-not-remember>
+                        <input type="hidden" name="phone" data-not-remember>
+                    </div>
+                    <div class="form-group col-md-12 submit-button-group">
+                        <button type="submit" class="register-btn">
+                            Send Form
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <section class="trade">
+        <div class="container">
+            <h2 class="trade__title">
+                Try trading with our free simulator
+            </h2>
+            <div class="trade__app">
+                <div class="trade__app-header">
+                    <div class="trade__app-row">
+                        <p class="trade__balance-title">Balance</p>
+                        <p class="trade__balance-num"></p>
+                    </div>
+                    <div class="trade__app-row">
+                        <div class="trade__btc-card">
+                            <div class="trade__btc-icon"></div>
+                            <div class="trade__btc-info">
+                                <p class="trade__btc-title">Bitcoin</p>
+                                <p class="trade__btc-name">BTC</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="chart-container" class="chart-container trade__chart"></div>
+                <div class="trade__footer trade__footer_buy trade__app-row">
+                    <div class="trade__footer-container">
+                        <div class="row">
+                            <div class="col-md-3 col-6 order-md-1 order-4">
+                                <div class="trade__cell">
+                                    <p class="trade__cell-title">Amount</p>
+                                    <p class="trade__cell-num amount">$ <span>250</span></p>
+                                    <ul class="trade__list" id="amount">
+                                        <li class="trade__element">100</li>
+                                        <li class="trade__element">250</li>
+                                        <li class="trade__element">500</li>
+                                        <li class="trade__element">1000</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6 order-md-2 order-3">
+                                <div class="trade__cell">
+                                    <p class="trade__cell-title">Leverage</p>
+                                    <p class="trade__cell-num leverage">10</p>
+                                    <ul class="trade__list" id="leverage">
+                                        <li class="trade__element">1</li>
+                                        <li class="trade__element">2</li>
+                                        <li class="trade__element">5</li>
+                                        <li class="trade__element">10</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6 order-md-3 order-1">
+                                <button class="trade__btn trade__btn_buy">Buy</button>
+                            </div>
+                            <div class="col-md-3 col-6 order-md-4 order-2">
+                                <button class="trade__btn trade__btn_sell">Sell</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="trade__footer trade__footer_close trade__app-row trade__footer_disabled">
+                    <div class="trade__footer-container">
+                        <button class="trade__btn trade__btn_close">Close</button>
+                    </div>
+                </div>
+                <div class="trade__final">
+                    <div class="trade__final-close"></div>
+                    <div class="trade__final-body">
+                        <p class="trade__final-title">Congratulations!</p>
+                        <p class="trade__final-subtitle">You won</p>
+                        <div class="trade__final-img-block">
+                            <img class="trade__final-img" src="/assets/img/pop-win.png" alt="">
+                        </div>
+                        <div class="trade__final-btns">
+                            <button class="trade__final-btn trade__final-btn_back">Back to game</button>
+                            <button class="trade__final-btn trade__final-btn_reg to-form">Registration</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container text-container">
+        <div class="row text-center text-white">
+            <p>
+                The pro app is one of the best of its kind for AI artificial intelligence advanced trading
+                functionalities. The new 2.0 TradeSoft version is a Crypto software designed for traders of all
+                experience levels to make better and more informed trading decisions. The platform works by analyzing
+                the market in real-time with crypto trading signals and making informed trading decisions based on
+                short-term and long-term market movements.
+            </p>
+            <p class="pb-5">With TradeSoft, traders can invest in some of the most popular Cryptocurrencies, including,
+                Bitcoin,
+                Ethereum, XRP, Solana, and over 10,000 more. The software caters to all traders of all experience levels
+                due to its simplicity and user-friendly features.
+            </p>
+            <p>
+                Since Crypto is a lot more volatile than many stocks, and every specific coin can be influenced by
+                factors that are often hard to analyze, it is crucial to use an auto trading platform like TradeSoft to
+                protect your trades from going into overnight losses.
+            </p>
+            <p>
+                The platform offers full AI artificial intelligence trading features. Having made its mark in the crypto
+                community as one of the best Bitcoin trading platforms for just over six years, TradeSoft is a key
+                Bitcoin and cryptocurrencies trading app to ensure a safer and more accurate trading experience. With
+                quick and easy registration & login functionalities, it is a simpler way to protect your trades and
+                portfolio.
+            </p>
+        </div>
+        <div class="col-lg-9 mx-auto py-4">
+            <img src="/assets/img/screens-1.png" alt="">
+        </div>
+        <div class="row text-center text-white">
+            <h2 class="pb-4">Safeguard your trades with TradeSoft Pro 2.0</h2>
+            <p>
+
+                TradeSoft is a pro app for AI technology and artificial intelligence functionalities for both beginner
+                and expert traders. Using the assistance of reputable trading software is crucial to making a profitable
+                investment. The Crypto industry is so volatile and can fluctuate from one day to another in a matter of
+                minutes, so as easily as some people can make a great profit, they can also make quick losses.
+                TradeSoft is designed to help minimize those losses.
+            </p>
+            <p>
+                How?
+                With its highly accurate trading functionalities that analyze when the market is going to go up and when
+                it’s going to go down based on both fundamental and technical analysis.
+            </p>
+            <p>
+                Trading Crypto is unlike any other market, it’s extremely volatile and requires a lot of attention on
+                the market to make the best trading decisions. Some traders spend their whole day reading market news
+                and watching charts to feel confident in their trading decisions, this is why a lot of people just end
+                up buying a coin and holding it.
+            </p>
+            <p>
+                As much as this technique can work and it has proven to be effective in the long term, buying low and
+                selling high can generate much larger profits. And since most people do not have the time to check Elon
+                Musk’s Twitter account every day to check for posts, a lot of people turn to the assistance of auto
+                trading software like TradeSoft.
+            </p>
+        </div>
+        <div class="col-lg-9 mx-auto py-4">
+            <img src="/assets/img/screens-3.png" alt="">
+        </div>
+        <div class="row text-center text-white">
+            <h2 class="pb-4">
+                There are many auto-trading platforms out there, so what makes TradeSoft different from the rest?
+            </h2>
+            <p>
+                TradeSoft is known for its incredibly fast trading indicators and functionalities – it can make market
+                decisions in a matter of seconds and can protect your funds from going into losses. With over half a
+                million users based worldwide, TradeSoft is a crucial part of any trader’s user experience. For more
+                information, you can refer to the TradeSoft reviews.
+            </p>
+        </div>
+    </div>
+    <div class="container my-3 py-5">
+        <div class="row row-cols-1 row-cols-lg-3">
+            <div class="col-md-4 text-center mx-auto">
+                <img class="item-img" src="/assets/img/instantly.png" alt="">
+                <h2>INSTANT ACCESS TO OVER 10,000 CRYPTOCURRENCIES </h2>
+                <p class="text-container">
+                    By opening an account with TradeSoft, get instant access to over 10,000 of the most popular
+                    cryptocurrencies including Bitcoin, Ethereum, Dogecoin, and plenty more.
+                </p>
+            </div>
+            <div class="col-md-4 text-center mx-auto">
+                <img class="item-img" src="/assets/img/easy-white.png" alt="">
+                <h2>QUICK AND EASY REGISTRATION PROCESS </h2>
+                <p class="text-container">
+                    Opening a TradeSoft account is quick and easy! All you need to do is register, fund your account
+                    with the minimum deposit of $200 – and you’re ready to start trading!
+                </p>
+            </div>
+            <div class="col-md-4 text-center mx-auto">
+                <img class="item-img" src="/assets/img/secure-white.png" alt="">
+                <h2>SECURITY AND RELIABILITY AT IT’S FINEST</h2>
+                <p class="text-container">
+                    The Crypto industry is full of untrustworthy sources. We pride ourselves on our transparency and
+                    reliability. Having been in the industry for many years, we know the importance of financial
+                    security.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <a href="#form" class="butn">
+                TRADE EASILY
+            </a>
+        </div>
+        <h2>
+            Whether you're a beginner or experienced trader, TradeSoft is a must for all Crypto traders
+        </h2>
+        <h3>
+            Now is the time to enter the market
+        </h3>
+        <p class="text">
+            TradeSoft works faster than any other trading software in the industry due to its high-tech features and
+            functionalities. Some of the most renowned Crypto traders are using TradeSoft as a way to protect their
+            trades. We all know how unpredictable this market can be, especially in the aftermath of the pandemic, and
+            most traders need to utilize this software to protect from potential uncertain times that may await us.
+        </p>
+        <br>
+        <br>
+        <p class="text">
+            The market has seen a recent crash, and as much as some traders are concerned, now is the best time to buy!
+            A lot of people missed out on the bull run in 2020, but it’s not too late to catch the next one! Especially
+            with the security of the TradeSoft software. On TradeSoft, you can trade over 10,000 cryptocurrencies like
+            Bitcoin, Ethereum, Solana, Cardano, XRP, Dogecoin, Polkadot, and many other crypto assets.
+        </p>
+        <div class="d-flex justify-content-center pb-5 mb-4">
+            <img class="w-75 mx-auto" src="/assets/img/screens-4.png" alt="">
+        </div>
+    </div>
+    <div id="about" class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="inner">
+                    <span class="inner__span">
+                        Easy registration process
+                    </span>
+                    <p class="py-4 text">
+                        Registering is quick and simple, all you need to do is leave down your details, fund your
+                        account
+                        with the minimum deposit and start trading.
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="inner">
+                    <span class="inner__span">
+                        $200 minimum deposit
+                    </span>
+                    <p class="py-4 text">
+                        Most auto-trading platforms ask for a much higher minimum deposit. Our strategy is to safeguard
+                        all
+                        traders
+                        from all financial backgrounds
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="inner">
+                    <span class="inner__span">
+                        State-of-the-art trading features
+                    </span>
+                    <p class="py-4 text">
+
+                        TradeSoft is known for its’ highly innovative trading functionalities, with one click execution
+                        and
+                        access
+                        to some of the most popular Cryptocurrencies
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="inner">
+                    <span class="inner__span">
+                        Trading Crypto made easy
+                    </span>
+                    <p class="py-4 text">
+                        With TradeSoft, you wont need to spend hours a day checking market news and trading charts, the
+                        software
+                        does the job for you
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="inner">
+                    <span class="inner__span">
+                        Intuitive user interface
+                    </span>
+                    <p class="py-4 text">
+                        Easy to understand and navigate interface is designed to make trade easy and convenient.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <img class="w-25" src="/assets/img/phone-transparent-bck.png" alt="">
+        </div>
+    </div>
+    <div class="container py-5 my-5">
+        <section id="faq" class="faq_section faq">
+            <div class="container text-center mb-4 mb-md-5">
+                <h2 class="title title-center">Frequently Asked Questions</h2>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="faq__item">
+                            <h3 class="faq__item-title">Do I need to invest a lot of money? </h3>
+                            <div class="faq__item-content">
+                                <p>The great thing about TradeSoft is that you do not need to invest a lot of money to
+                                    start trading. You can start trading for as low as $200. So even if you’re not 100%
+                                    sure
+                                    of your trading capabilities but you want to try it out, you don’t need to invest a
+                                    large amount of money to do so. </p>
+                            </div>
+                        </div>
+                        <div class="faq__item">
+                            <h3 class="faq__item-title">Is trading crypto risky? </h3>
+                            <div class="faq__item-content">
+                                <p>Trading crypto can be risky for the simple fact that the market is so volatile. This
+                                    is
+                                    why a lot of traders choose to invest in good auto-trading software to decrease
+                                    their
+                                    chances of losses. Trading Crypto doesn’t have to be risky with the right tools, and
+                                    the
+                                    potential rewards always overtake the risks. </p>
+
+                            </div>
+                        </div>
+                        <div class="faq__item">
+                            <h3 class="faq__item-title">Do I need to have experience? </h3>
+                            <div class="faq__item-content">
+                                <p>You do not need the experience to start using TradeSoft. The platform is designed for
+                                    both beginner and experienced traders due to its user-friendly functionalities. The
+                                    platform is simple yet innovative for a quick and easy understanding of the market.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq__item">
+                            <h3 class="faq__item-title">Is TradeSoft reliable? </h3>
+                            <div class="faq__item-content">
+                                <p>TradeSoft is considered one of the most reliable platforms available on the market.
+                                    With over half a million users spread around the world, the software is known for
+                                    its
+                                    reliable functionalities and positive results. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <h2>TradeSoft will bring you peace of mind while trading cryptocurrencies!</h2>
+        <div class="row my-5 py-5">
+            <a href="#form" class="butn text-center">
+                Register with Pro 2.0 TradeSoft
+            </a>
+        </div>
+        <section class="swip">
+            <div class="container">
+                <h2 class="pb-5">
+                    What our clients said about us
+                </h2>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="/assets/img/user-1.png" alt="">
+                            <p class="swiper-text">
+                                Registering for TradeSoft was super easy and straightforward! Since I wasn't sure at
+                                first
+                                about the platform i was happy to see that I only needed $200 to fund my account, so i
+                                didn't feel like i was making a big commitment! It’s been life changing for my trading
+                                experiences and I can't believe that there was a time I traded without it! Would HIGHLY
+                                recommend!
+                            </p>
+                            <p>
+                                Andrew, from United Kingdom
+                            </p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/assets/img/user-2.png" alt="">
+                            <p class="swiper-text">
+                                So glad i found this platform, I can't imagine ever trading without it! It gives me such
+                                a
+                                reassuring feeling knowing that my trades are being safeguarded! I would highly
+                                recommend
+                                for any beginner traders, or even experienced traders! It never hurts to have a bit more
+                                security, especially when dealing with money.
+                            </p>
+                            <p>
+                                Annika, from Sweden
+                            </p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/assets/img/user-3.png" alt="">
+                            <p class="swiper-text">
+                                TradeSoft really helped me from making some bad trading decisions. I'm not a very
+                                experienced trader and I never claimed to be so I needed the assistance that TradeSoft
+                                gave
+                                me. I’ve very thankful that I found this platform and I would never feel safe to start
+                                trading without it anymore
+                            </p>
+                            <p>
+                                Pauline, from France
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-nav">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <div class="swiper-dots">
+                    <div class="swiper-dot"><span></span></div>
+                    <div class="swiper-dot"><span></span></div>
+                    <div class="swiper-dot"><span></span></div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 my-auto">
+                <h2 class="py-5">
+                    Register now, the process is quick and easy!
+                </h2>
+                <form class="form signup_form" action="/registration" method="POST" novalidate="novalidate">
+                    <div class="form-group col-xs-6">
+                        <input type="text" name="first_name" class="form-control" placeholder="First name"
+                            title="First Name">
+                    </div>
+                    <div class="form-group col-xs-6">
+                        <input type="text" name="last_name" class="form-control" placeholder="Surname"
+                            title="Last Name">
+                    </div>
+                    <div class="form-group col-xs-12">
+                        <input type="email" name="email" class="form-control" placeholder="Email" title="Email Address">
+                    </div>
+                    <div class="form-group col-xs-12 phone-group">
+                        <input type="tel" name="phone_raw" class="form-control" placeholder="Phone Number"
+                            title="Phone Number" data-not-remember>
+                        <input type="hidden" name="phone" data-not-remember>
+                    </div>
+                    <div class="form-group col-md-12 submit-button-group">
+                        <button type="submit" class="register-btn">
+                            Send Form
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container footers">
+        <ul class="menu-footer">
+            <li>
+                <a href="#about">About Us</a>
+            </li>
+            <li>
+                <a href="#faq">FAQ Page</a>
+            </li>
+            <li>
+                <a href="#form">Contact Us</a>
+            </li>
+            <li>
+                <a href="#form">Login</a>
+            </li>
+        </ul>
+        <p class="text opacity-75">
+            Risk Warning: Trading can lead to significant profits; however, it also carries the risk of losing some or
+            all
+            of the funds, which should be considered by first-time investors. Roughly 70% of investors will lose money
+            at
+            some point. Please carefully read our terms and conditions and disclaimer page before investing.
+        </p>
+        <div class="footer">
+            <div class="footer__items">
+                <div class="footer__item mb-4">
+                    <p> 2.0 Copyrights <span class="cYear"></span> All Rights</p>
+                    <p>Reserved.</p>
+                </div>
+            </div>
+            <div class="footer__items">
+                <div class="footer__item mb-4">
+                    <p>
+                        TradeSoft LTD
+                    </p>
+                    <p>
+                        King St Westminster London WC2E 8HN United Kingdom
+                    </p>
+                </div>
+            </div>
+            <div class="footer__items">
+                <div class="footer__item mb-4">
+                    <p class="privacy">
+                        <span data-bs-toggle="modal" data-bs-target="#privacy" class="policy-link">
+                            Privacy</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="final" tabindex="-1" aria-labelledby="finalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title" id="finalLabel">Congratulate</h3>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Your score:</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary modal-btn" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div class="modal" id="privacy" tabindex="-1" aria-labelledby="exampleModalLabel" style="display: none;"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Privacy Policy
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        This page informs you of our policies regarding the collection, use, and disclosure of
+                        personal data
+                        when
+                        you use our Service and the choices you have associated with that data.
+                    </p>
+                    <p>
+                        We use your data to provide and improve the Service. By using the Service, you agree to the
+                        collection and
+                        use of information in accordance with this policy. Unless otherwise defined in this Privacy
+                        Policy,
+                        terms
+                        used in this Privacy Policy have the same meanings as in our Terms and Conditions
+                    </p>
+                    <h3>Personal Data
+                    </h3>
+                    <p>
+                        Personal Data means data about a living individual who can be identified from those data (or
+                        from
+                        those and
+                        other information either in our possession or likely to come into our possession).
+                    </p>
+                    <h3>Usage Data
+                    </h3>
+                    <p>Usage Data is data collected automatically either generated by the use of the Service or from
+                        the
+                        Service
+                        infrastructure itself (for example, the duration of a page visit).
+
+                    </p>
+                    <h3>Cookies
+                    </h3>
+                    <p>
+                        Cookies are small pieces of data stored on your device (computer or mobile device).
+                    </p>
+                    <h3>Data Controller
+                    </h3>
+                    <p>
+                        Data Controller means the natural or legal person who (either alone or jointly or in common
+                        with
+                        other
+                        persons) determines the purposes for which and the manner in which any personal information
+                        are, or
+                        are to
+                        be, processed.
+                    </p>
+                    <p>
+                        For the purpose of this Privacy Policy, we are a Data Controller of your Personal Data.
+                    </p>
+                    <h3>Data Processors (or Service Providers)
+                    </h3>
+                    <p>Data Processor (or Service Provider) means any natural or legal person who processes the data
+                        on
+                        behalf of
+                        the Data Controller.
+                    </p>
+                    <p>
+                        We may use the services of various Service Providers in order to process your data more
+                        effectively.
+                    </p>
+                    <h3>Data Subject (or User)
+                    </h3>
+                    <p>Data Subject is any living individual who is using our Service and is the subject of Personal
+                        Data.
+                    </p>
+                    <h3>Information Collection and Use
+                    </h3>
+                    <p>
+                        We collect several different types of information for various purposes to provide and
+                        improve our
+                        Service to
+                        you.
+                    </p>
+                    <h3>Types of Data Collected
+                    </h3>
+                    <p>Personal Data
+
+                        While using our Service, we may ask you to provide us with certain personally identifiable
+                        information that
+                        can be used to contact or identify you ("Personal Data"). Personally identifiable
+                        information may
+                        include,
+                        but is not limited to:</p>
+                    <p>Email address
+                        First name and last name
+                        Phone number
+                        Cookies and Usage Data
+
+                    </p>
+                    <p>We may use your Personal Data to contact you with newsletters, marketing or promotional
+                        materials and
+                        other
+                        information that may be of interest to you. You may opt out of receiving any, or all, of
+                        these
+                        communications from us by following the unsubscribe link or instructions provided in any
+                        email we
+                        send.
+                    </p>
+                    <p>Usage Data
+                    </p>
+                    <p>We may also collect information how the Service is accessed and used ("Usage Data"). This
+                        Usage Data
+                        may
+                        include information such as your computer's Internet Protocol address (e.g. IP address),
+                        browser
+                        type,
+                        browser version, the pages of our Service that you visit, the time and date of your visit,
+                        the time
+                        spent on
+                        those pages, unique device identifiers and other diagnostic data.</p>
+
+                    <p>Tracking & Cookies Data</p>
+                    <p>We use cookies and similar tracking technologies to track the activity on our Service and
+                        hold
+                        certain
+                        information.</p>
+                    <p>Cookies are files with small amount of data which may include an anonymous unique identifier.
+                        Cookies
+                        are
+                        sent to your browser from a website and stored on your device. Tracking technologies also
+                        used are
+                        beacons,
+                        tags, and scripts to collect and track information and to improve and analyze our Service.
+                    </p>
+                    <p>You can instruct your browser to refuse all cookies or to indicate when a cookie is being
+                        sent.
+                        However, if
+                        you do not accept cookies, you may not be able to use some portions of our Service.
+                    </p>
+                    <p>Examples of Cookies we use:</p>
+                    <p>Session Cookies. We use Session Cookies to operate our Service.
+                        Preference Cookies. We use Preference Cookies to remember your preferences and various
+                        settings.
+                        Security Cookies. We use Security Cookies for security purposes.
+                        Advertising Cookies. Advertising Cookies are used to serve you with advertisements that may
+                        be
+                        relevant to
+                        you and your interests.</p>
+                    <h3>Use of Data
+                    </h3>
+                    <p>Uses the collected data for various purposes:
+
+                        To provide and maintain our Service
+
+                        To notify you about changes to our Service
+
+                        To allow you to participate in interactive features of our Service when you choose to do so
+
+                        To provide customer support
+
+                        To gather analysis or valuable information so that we can improve our Service
+
+                        To monitor the usage of our Service
+
+                        To detect, prevent and address technical issues
+
+                        To provide you with news, special offers and general information about other goods, services
+                        and
+                        events
+                        which we offer that are similar to those that you have already purchased or enquired about
+                        unless
+                        you have
+                        opted not to receive such information
+                    </p>
+                    <h3>Legal Basis for Processing Personal Data Under General Data Protection Regulation (GDPR)
+                    </h3>
+                    <p>If you are from the European Economic Area (EEA), legal basis for collecting and using the
+                        personal
+                        information described in this Privacy Policy depends on the Personal Data we collect and the
+                        specific
+                        context in which we collect it.
+
+                        Tay process your Personal Data because:
+                        We need to perform a contract with you.
+                        You have given us permission to do so
+                        The processing is in our legitimate interests and it's not overridden by your rights
+                        To comply with the law
+
+                    </p>
+                    <h3>
+                        Retention of Data
+                    </h3>
+                    <p>
+                        Till retain your Personal Data only for as long as is necessary for the purposes set out in
+                        this
+                        Privacy
+                        Policy. We will retain and use your Personal Data to the extent necessary to comply with our
+                        legal
+                        obligations (for example, if we are required to retain your data to comply with applicable
+                        laws),
+                        resolve
+                        disputes, and enforce our legal agreements and policies.
+
+                        Till also retain Usage Data for internal analysis purposes. Usage Data is generally retained
+                        for a
+                        shorter
+                        period of time, except when this data is used to strengthen the security or to improve the
+                        functionality of
+                        our Service, or we are legally obligated to retain this data for longer time periods.
+                    </p>
+                    <h3>Transfer of Data</h3>
+                    <p>Your information, including Personal Data, may be transferred to — and maintained on —
+                        computers
+                        located
+                        outside of your state, province, country or other governmental jurisdiction where the data
+                        protection laws
+                        may differ than those from your jurisdiction.
+
+                        If you are located outside the United Kingdom and choose to provide information to us, please
+                        note that
+                        we
+                        transfer the data, including Personal Data, to the United Kingdom and process it there.
+
+                        Your consent to this Privacy Policy followed by your submission of such information
+                        represents your
+                        agreement to that transfer.
+
+                        Will take all steps reasonably necessary to ensure that your data is treated securely and in
+                        accordance with
+                        this Privacy Policy and no transfer of your Personal Data will take place to an organization
+                        or a
+                        country
+                        unless there are adequate controls in place including the security of your data and other
+                        personal
+                        information.</p>
+                    <h3>Disclosure of Data
+
+                    </h3>
+                    <p>Legal Requirements
+                        Tay disclose your Personal Data in the good faith belief that such action is necessary to:
+                        To comply with a legal obligation
+                        To prevent or investigate possible wrongdoing in connection with the Service
+                        To protect the personal safety of users of the Service or the public
+                        To protect against legal liability
+                    </p>
+                    <h3>Security of Data
+                    </h3>
+                    <p>The security of your data is important to us, but remember that no method of transmission
+                        over the
+                        Internet, or method of electronic storage is 100% secure. While we strive to use
+                        commercially
+                        acceptable
+                        means to protect your Personal Data, we cannot guarantee its absolute security.
+                        Your Data Protection Rights Under General Data Protection Regulation (GDPR)
+                        If you are a resident of the European Economic Area (EEA), you have certain data protection
+                        rights.
+                        Aims to
+                        take reasonable steps to allow you to correct, amend, delete, or limit the use of your
+                        Personal
+                        Data.
+                        If you wish to be informed what Personal Data we hold about you and if you want it to be
+                        removed
+                        from our
+                        systems, please contact us.
+                        In certain circumstances, you have the following data protection rights:
+                        The right to access, update or to delete the information we have on you. Whenever made
+                        possible, you
+                        can
+                        access, update or request deletion of your Personal Data directly within your account
+                        settings
+                        section. If
+                        you are unable to perform these actions yourself, please contact us to assist you.
+                        The right of rectification. You have the right to have your information rectified if that
+                        information is
+                        inaccurate or incomplete.
+                    </p>
+                    <p>The right to object. You have the right to object to our processing of your Personal Data.
+                        The right of restriction. You have the right to request that we restrict the processing of
+                        your
+                        personal
+                        information.
+                        The right to data portability. You have the right to be provided with a copy of the
+                        information we
+                        have on
+                        you in a structured, machine-readable and commonly used format.
+                        The right to withdraw consent. You also have the right to withdraw your consent at any time
+                        were
+                        relied on
+                        your consent to process your personal information.
+                        Please note that we may ask you to verify your identity before responding to such requests.
+                        You have the right to complain to a Data Protection Authority about our collection and use
+                        of your
+                        Personal
+                        Data. For more information, please contact your local data protection authority in the
+                        European
+                        Economic
+                        Area (EEA).</p>
+                    <h3>Service Providers
+                    </h3>
+                    <p>We may employ third party companies and individuals to facilitate our Service ("Service
+                        Providers"),
+                        to
+                        provide the Service on our behalf, to perform Service-related services or to assist us in
+                        analyzing
+                        how our
+                        Service is used.
+
+                        These third parties have access to your Personal Data only to perform these tasks on our
+                        behalf and
+                        are
+                        obligated not to disclose or use it for any other purpose.
+
+                        Analytics
+
+                        We may use third-party Service Providers to monitor and analyze the use of our Service.
+
+                        Advertising
+
+                        We may use third-party Service Providers to show advertisements to you to help support and
+                        maintain
+                        our
+                        Service.
+
+                        Bing Ads is an advertising service provided by Microsoft, Inc.
+
+                        Behavioral Remarketing
+
+                        Tses remarketing services to advertise on third party websites to you after you visited our
+                        Service.
+                        We and
+                        our third-party vendors use cookies to inform, optimize and serve ads based on your past
+                        visits to
+                        our
+                        Service.
+
+                        Google AdWords remarketing service is provided by Google Inc.
+
+                        Bing Ads remarketing service is provided by Microsoft Inc.
+
+                        Facebook remarketing service is provided by Facebook Inc.
+
+                        Links to Other Sites
+
+                        Our Service may contain links to other sites that are not operated by us. If you click on a
+                        third
+                        party
+                        link, you will be directed to that third party's site. We strongly advise you to review the
+                        Privacy
+                        Policy
+                        of every site you visit.
+
+                        We have no control over and assume no responsibility for the content, privacy policies or
+                        practices
+                        of any
+                        third party sites or services.
+
+                        Children's Privacy
+                        Our Service does not address anyone under the age of 18 ("Children").
+                    </p>
+                    <p>
+                        We do not knowingly collect personally identifiable information from anyone under the age of
+                        18. If
+                        you are
+                        a parent or guardian, and you are aware that your child has provided us with Personal Data,
+                        please
+                        contact
+                        us. If we become aware that we have collected Personal Data from children without
+                        verification of
+                        parental
+                        consent, we take steps to remove that information from our servers.
+                    </p>
+                    <h3>Changes to This Privacy Policy
+                    </h3>
+                    <p>We may update our Privacy Policy from time to time. We will notify you of any changes by
+                        posting the
+                        new
+                        Privacy Policy on this page.
+
+                        We will let you know via email and/or a prominent notice on our Service, prior to the change
+                        becoming
+                        effective and update the "effective date" at the top of this Privacy Policy.
+
+                        You are advised to review this Privacy Policy periodically for any changes. Changes to this
+                        Privacy
+                        Policy
+                        are effective when they are posted on this page.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+<script defer>
+    window.serverProps = {
+        oldInputs: {{#if old}} {{{json old}}} {{else}} null {{/if}},
+        validationErrors: {{#if errors}} {{{json errors}}} {{else}} null {{/if}},
+            server_error_code: {{#not_null server_error_code }} '{{{this}}}' {{else}} null {{/not_null}},
+                frod_autologin_url: {{#not_null frod_autologin_url }} '{{{this}}}' {{else}} null {{/not_null}}
+};
+</script>
+ 
+<script defer src="/assets/js/bundle.aace091d82d5c0e9a4b4.js"></script></body>
+
+</html>
